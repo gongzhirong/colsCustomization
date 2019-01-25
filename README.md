@@ -5,6 +5,15 @@
 
 > 并根据特定规则把数据存储于localStorage中
 
+## 组件包安装
+`npm i cols-customization -D`
+
+## 组件注册
+```javascript
+import ColsCustomization from 'cols-customization'
+Vue.use(ColsCustomization)
+```
+
 ## 参数传入
 > * @param model 关联使用的table绑定cols的变量（重点：该值最会在第一次初始化数据的时候会赋值到本组件，后续修改不再由父级传值回来渲染）
 > * @param clos 模块初始化列数据
