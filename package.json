@@ -1,7 +1,7 @@
 {
   "name": "cols-customization",
   "description": "iview-ui辅助Table使用的列自定义组件",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "author": "gongzhirong <gongzhirong@chinasie.com>",
   "license": "MIT",
   "private": false,
