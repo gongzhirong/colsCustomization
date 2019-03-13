@@ -2,12 +2,12 @@
   <div id="app">
     <Table size="small" border disabled-hover highlight-row :columns="tableColumns" :data="tableData" :height="400"></Table>
     <Page style="margin-top: 10px;text-align: center;"></Page>
-    <ColCustomization v-model="tableColumns" colsCode="xxxx"></ColCustomization>
+    <ColsCustomization v-model="tableColumns" colsCode="xxxx"></ColsCustomization>
   </div>
 </template>
 
 <script>
-import ColCustomization from './component/colCustomization.vue'
+import ColsCustomization from './component/colsCustomization.vue'
 export default {
   name: 'app',
   data () {
@@ -15,7 +15,7 @@ export default {
       tableData: [{}, {}, {}, {}],
       tableColumns: [
         {title: '订单编号', key: 'n1', show: true, fixed: 'left', width: 160},
-        {title: '客户采购编码', key: 'n2', show: true, fixed: false, width: 160},
+        {title: '客户采购编码特比厂怎么处理呢', key: 'n2', show: true, fixed: false, width: 160},
         {title: '订单生成日期', key: 'n3', show: true, fixed: false, width: 160},
         {title: '订单状态', key: 'n4', show: true, fixed: false, width: 120},
         {title: '总价', key: 'n5', show: true, fixed: false, width: 200},
@@ -26,7 +26,7 @@ export default {
     }
   },
   components: {
-    ColCustomization
+    ColsCustomization
   }
 }
 </script>

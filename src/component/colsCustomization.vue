@@ -7,7 +7,7 @@
         </div>
         <ul class="content" slot="content">
           <li class="content_item" v-for="(col, index) in initCols" :key="col.key">
-            <Checkbox v-model="col.show" @on-change="changeCols">{{col.title}}</Checkbox>
+            <Checkbox v-model="col.show" @on-change="changeCols"><span :title="col.title">{{col.title}}</span></Checkbox>
             <div class="iconBt">
               <a @click="arrowUp(index)">
                 <Icon type="md-arrow-round-up" />
@@ -135,11 +135,14 @@ export default {
 
   .ivu-checkbox-wrapper {
     display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .content {
     .content_item {
-      padding: 4px 48px 4px 17px;
+      padding: 4px 24px 4px 17px;
       position: relative;
 
       .iconBt {
