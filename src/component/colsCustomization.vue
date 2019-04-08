@@ -7,8 +7,8 @@
         </div>
         <ul class="content" slot="content">
           <li class="content_item" v-for="(col, index) in initCols" :key="col.key">
-            <Checkbox v-model="col.show" @on-change="changeCols"><span :title="col.title">{{col.title}}</span></Checkbox>
-            <div class="iconBt">
+            <Checkbox v-model="col.show" @on-change="changeCols" :disabled="col.fixed ? true : false"><span :title="col.title">{{col.title}}</span></Checkbox>
+            <div class="iconBt" v-if="!col.fixed">
               <a @click="arrowUp(index)">
                 <Icon type="md-arrow-round-up" />
               </a>
@@ -72,11 +72,13 @@ export default {
   },
   methods: {
     arrowUp (index) {
+      if (this.initCols[index - 1] && this.initCols[index - 1].fixed) return
       let col = this.initCols[index]
       this.initCols.splice(index, 1)
       this.initCols.splice(index - 1, 0, col)
     },
     arrowDown (index) {
+      if (this.initCols[index + 1] && this.initCols[index + 1].fixed) return
       let col = this.initCols[index]
       this.initCols.splice(index, 1)
       this.initCols.splice(index + 1, 0, col)
