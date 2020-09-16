@@ -1,7 +1,9 @@
 # 组件 ColsCustomization
-> 基于 vue+iview
-> 该组件目前作用于辅助iview列自定义控制
-> 并根据特定规则把数据存储于localStorage中
+基于 vue+iview
+
+该组件目前作用于辅助iview列自定义控制
+
+并根据特定规则把数据存储于localStorage中
 
 ## 组件包安装
 `npm i cols-customization --save`
